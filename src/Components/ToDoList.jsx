@@ -139,7 +139,7 @@ function ToDoList({ todos, onToggleTodo, onDeleteTodo, onEditTodo }) {
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-3">
                     <div
-                        className="bg-gradient-to-r from-green-400 to-blue-500 h-3 rounded-full transition-all duration-500"
+                        className="bg-linear-to-r from-green-400 to-blue-500 h-3 rounded-full transition-all duration-500"
                         style={{ width: `${(completedTasks / totalTasks) * 100 || 0}%` }}
                     ></div>
                 </div>
