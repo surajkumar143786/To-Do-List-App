@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #ecf0f1;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+/* Global hover effects */
+button:hover:not(:disabled) {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+input:focus {
+    border-color: #3498db !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    .form {
+        flex-direction: column;
+    }
+
+    .stats {
+        gap: 1rem;
+    }
+
+    .statItem {
+        min-width: 80px;
+        padding: 0.75rem 1rem;
+    }
+
+    .statNumber {
+        font-size: 1.5rem;
+    }
+}
+
+/* List styles */
+.tipsList li {
+    margin-bottom: 0.5rem;
+}
