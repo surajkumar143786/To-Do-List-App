@@ -24,7 +24,7 @@ function AddTodoForm({ onAddTodo }) {
     ]
 
     return (
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-6 mb-8 border border-blue-100">
+        <div className="bg-linear-to-r from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-6 mb-8 border border-blue-100">
             <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
                 <span className="mr-3">➕</span> Add New Task
             </h2>
