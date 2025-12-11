@@ -18,5 +18,5 @@ A modern, feature-rich To-Do List application built with React and Tailwind CSS.
 ## 🛠️ Installation
 ```bash
 git clone https://github.com/surajkumar143786/To-Do-List-App.git
-npm install
-npm run dev
+2. npm install
+3. npm run dev
