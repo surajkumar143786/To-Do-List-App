@@ -126,7 +126,7 @@ function App() {
     const stats = calculateStats(todos)
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50">
+        <div className="min-h-screen bg-linear-to-br from-purple-50 via-blue-50 to-pink-50">
             {/* Background decorative elements */}
             <div className="fixed inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
@@ -150,7 +150,7 @@ function App() {
                                 onClick={clearCompleted}
                                 disabled={stats.completed === 0}
                                 className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${stats.completed > 0
-                                        ? 'bg-gradient-to-r from-red-500 to-pink-600 text-white shadow-md hover:shadow-lg transform hover:-translate-y-0.5'
+                                    ? 'bg-linear-to-r from-red-500 to-pink-600 text-white shadow-md hover:shadow-lg transform hover:-translate-y-0.5'
                                         : 'bg-gray-100 text-gray-400 cursor-not-allowed'
                                     }`}
                             >
@@ -159,7 +159,7 @@ function App() {
 
                             <button
                                 onClick={handleExport}
-                                className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                                className="px-4 py-2 bg-linear-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                             >
                                 Export Tasks
                             </button>
@@ -178,27 +178,27 @@ function App() {
 
                     {/* Statistics Grid with animation */}
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 slide-up">
-                        <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl border border-blue-200">
+                        <div className="bg-linear-to-br from-blue-50 to-blue-100 p-4 rounded-xl border border-blue-200">
                             <p className="text-sm text-blue-600">Total Tasks</p>
                             <p className="text-2xl font-bold text-blue-800">{stats.total}</p>
                         </div>
-                        <div className="bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-xl border border-green-200">
+                        <div className="bg-linear-to-br from-green-50 to-green-100 p-4 rounded-xl border border-green-200">
                             <p className="text-sm text-green-600">Completed</p>
                             <p className="text-2xl font-bold text-green-800">{stats.completed}</p>
                         </div>
-                        <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-4 rounded-xl border border-yellow-200">
+                        <div className="bg-linear-to-br from-yellow-50 to-yellow-100 p-4 rounded-xl border border-yellow-200">
                             <p className="text-sm text-yellow-600">Pending</p>
                             <p className="text-2xl font-bold text-yellow-800">{stats.pending}</p>
                         </div>
-                        <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-4 rounded-xl border border-purple-200">
+                        <div className="bg-linear-to-br from-purple-50 to-purple-100 p-4 rounded-xl border border-purple-200">
                             <p className="text-sm text-purple-600">Completion</p>
                             <p className="text-2xl font-bold text-purple-800">{stats.completionPercentage}%</p>
                         </div>
-                        <div className="bg-gradient-to-br from-red-50 to-red-100 p-4 rounded-xl border border-red-200">
+                        <div className="bg-linear-to-br from-red-50 to-red-100 p-4 rounded-xl border border-red-200">
                             <p className="text-sm text-red-600">High Priority</p>
                             <p className="text-2xl font-bold text-red-800">{stats.byPriority.high}</p>
                         </div>
-                        <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-4 rounded-xl border border-indigo-200">
+                        <div className="bg-linear-to-br from-indigo-50 to-indigo-100 p-4 rounded-xl border border-indigo-200">
                             <p className="text-sm text-indigo-600">Storage</p>
                             <p className="text-2xl font-bold text-indigo-800">✓</p>
                         </div>
@@ -216,13 +216,13 @@ function App() {
                             <div className="flex gap-3">
                                 <button
                                     onClick={resetToSample}
-                                    className="px-4 py-2 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 rounded-lg font-medium hover:shadow-md transition-all duration-200"
+                                    className="px-4 py-2 bg-linear-to-r from-gray-100 to-gray-200 text-gray-700 rounded-lg font-medium hover:shadow-md transition-all duration-200"
                                 >
                                     Reset to Sample
                                 </button>
                                 <button
                                     onClick={clearAllTodos}
-                                    className="px-4 py-2 bg-gradient-to-r from-red-500 to-pink-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 text-sm"
+                                    className="px-4 py-2 bg-linear-to-r from-red-500 to-pink-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 text-sm"
                                 >
                                     Clear All Tasks
                                 </button>
@@ -244,15 +244,15 @@ function App() {
                 <footer className="mt-12 text-center text-gray-600 text-sm">
                     <div className="flex flex-wrap justify-center gap-4 mb-4">
                         <span className="flex items-center px-3 py-1 bg-white/80 backdrop-blur-sm rounded-full">
-                            <div className="w-2 h-2 bg-gradient-to-r from-green-400 to-green-500 rounded-full mr-2"></div>
+                            <div className="w-2 h-2 bg-linear-to-r from-green-400 to-green-500 rounded-full mr-2"></div>
                             Click checkbox to toggle
                         </span>
                         <span className="flex items-center px-3 py-1 bg-white/80 backdrop-blur-sm rounded-full">
-                            <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full mr-2"></div>
+                            <div className="w-2 h-2 bg-linear-to-r from-blue-400 to-blue-500 rounded-full mr-2"></div>
                             Double click to edit
                         </span>
                         <span className="flex items-center px-3 py-1 bg-white/80 backdrop-blur-sm rounded-full">
-                            <div className="w-2 h-2 bg-gradient-to-r from-red-400 to-red-500 rounded-full mr-2"></div>
+                            <div className="w-2 h-2 bg-linear-to-r from-red-400 to-red-500 rounded-full mr-2"></div>
                             Export/Import your tasks
                         </span>
                     </div>
